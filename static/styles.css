@@ -1,0 +1,695 @@
+.meta-hidden {
+    display: none
+}
+
+.text-sm {
+    font-size: 1.4em;
+}
+
+.text-sm1 {
+    font-size: 1.6em;
+}
+
+.text-md {
+    font-size: 1.8em;
+}
+
+.text-md1 {
+    font-size: 1.9em;
+}
+
+.text-lg {
+    font-size: 2.7em;
+}
+
+.text-m1 {
+    margin-top: 1em;
+}
+
+.text-m2 {
+    margin-top: 2em;
+}
+
+.text-m3 {
+    margin-top: 3em
+}
+
+strong {
+    font-weight: bold;
+}
+
+.slide-content {
+    width: 1000px;
+}
+
+.text-left {
+    position: absolute;
+    left: 80px;
+    width: 800px;
+}
+
+.text-right {
+    position: absolute;
+    right: 80px;
+    width: 800px;
+}
+.text-right2 {
+    position: absolute;
+    right: 80px;
+    width: 600px;
+}
+
+
+
+.text-bottom {
+    position: absolute;
+    left: 80px;
+    bottom: 120px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+
+.title-page {
+    background: url(images/bg/desert-sand.jpg) no-repeat center center fixed;
+    background-size: cover;
+    color: #373538;
+}
+.plant {
+    background: url(images/bg/plant.jpg) no-repeat center center fixed;
+    background-size: 100% 100%;
+    color: #373538;
+}
+
+.arch {
+    background: url(images/bg/arch.jpg) no-repeat center center fixed;
+    background-size: 100% 100%;
+    color: #373538;
+}
+
+
+
+.rope {
+    background: url(images/bg/rope.jpg) no-repeat center center fixed;
+    background-size: cover;
+    color: #373538;
+}
+
+.ruins {
+    background: url(images/bg/ruins.jpg) no-repeat center center fixed;
+    background-size: cover;
+    color: #373538;
+}
+
+
+.oldpaper {
+    background: url(images/bg/pen.jpg) no-repeat center center fixed;
+    background-size: cover;
+    color: #373538;
+}
+
+
+.cyrus {
+    background: url(images/bg/cyrus.jpg) no-repeat center center fixed;
+    background-size: cover;
+    color: #373538;
+}
+
+.artaxerxes {
+    background: url(images/bg/artaxerxes.jpg) no-repeat center center fixed;
+    background-size: cover;
+    color: #373538;
+}
+
+.jesus {
+    background: url(images/bg/jesus-portrait1.jpg) no-repeat center center fixed;
+    background-size: cover;
+    color: #373538;
+}
+
+.river-bg {
+    background: url(images/bg/riverbg.jpg) no-repeat center center fixed;
+    background-size: cover;
+    color: #373538;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.coins {
+    background: url(images/bg/coins.jpg) no-repeat center center fixed;
+    background-size: cover;
+    color: #373538;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.mountainsunset {
+    background: url(images/bg/mountainsunset.jpg) no-repeat center center fixed;
+    background-size: cover;
+    color: #151515;
+}
+
+
+.crown {
+    background: url(images/bg/crown.jpg) no-repeat center center fixed;
+    background-size: cover;
+    color: #151515;
+}
+
+
+.sword {
+    background: url(images/bg/sword.jpg) no-repeat center center fixed;
+    background-size: cover;
+    color: #151515;
+}
+
+.sundial {
+    background: url(images/bg/sundial.jpg) no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+}
+
+.prayer {
+    background: url(images/bg/prayer.jpg) no-repeat center center fixed;
+    background-size: cover;
+    color: #151515;
+}
+
+.night {
+    background: url(images/bg/night.jpg) no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+}
+
+.whitecloud {
+    background: url(images/bg/whitecloud.jpg) no-repeat center center fixed;
+    background-size: cover;
+    color: #151515;
+}
+
+.zoltar {
+    background: url(images/bg/zoltar.jpg) no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+}
+
+.stonewall {
+    background: url(images/bg/stonewall.jpg) no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+}
+
+.danieldream {
+    background: url(images/bg/danieldream1.jpg) no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+}
+
+.boulders {
+    background: url(images/bg/boulders.jpg) no-repeat center center fixed;
+    background-size: cover;
+    color: #151515;
+}
+
+.danieldreamdrawing {
+    background: url(images/bg/danieldream.gif) no-repeat center center fixed;
+    background-size: cover;
+    color: #151515;
+}
+
+.markers {
+    background: url(images/bg/markers.jpg) no-repeat center center fixed;
+    background-size: cover;
+    color: #151515;
+}
+
+.alps {
+    background: url(images/bg/alps.jpg) no-repeat center center fixed;
+    background-size: cover;
+    color: #151515;
+}
+
+.desertrock {
+    background: url(images/bg/desertrock.jpg) no-repeat center center fixed;
+    background-size: cover;
+    color: #151515;
+}
+
+.waves1 {
+    background: url(images/bg/preshinckley.jpg) no-repeat center center fixed;
+    background-size: cover;
+    color: #151515;
+}
+
+
+
+
+
+
+
+
+.fish {
+    background: url(images/bg/fish.jpg) no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+}
+
+.nets {
+    background: url(images/bg/nets.jpg) no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+}
+
+.marsh {
+    background: url(images/bg/marsh.jpg) no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+}
+
+.riverocean {
+    background: url(images/bg/riverocean.jpg) no-repeat center center fixed;
+    background-size: cover;
+    color: #151515;
+}
+
+.jerusalemmap {
+    background: url(images/jerusalemmap.png) no-repeat center center fixed;
+    background-size: cover;
+    color: #151515;
+}
+
+
+
+
+
+.markers {
+    background: url(images/bg/markers.jpg) no-repeat center center fixed;
+    background-size: cover;
+    color: #151515;
+}
+
+.pollution {
+    background: url(images/bg/smokestack.jpg) no-repeat center center fixed;
+    background-size: cover;
+    color: #151515;
+}
+
+.tent-red {
+    background: url(images/bg/tent-red.jpg) no-repeat center center fixed;
+    background-size: cover;
+    color: #3d3d3d;
+}
+
+.tent-clipart {
+    background: url(images/bg/tent-clipart.jpg) no-repeat center center fixed;
+    background-size: cover;
+    color: black;
+}
+
+.steak1 {
+    background: url(images/bg/steak1.jpg) no-repeat center center fixed;
+    background-size: cover;
+    color: black;
+}
+
+.steak2 {
+    background: url(images/bg/steak2.jpg) no-repeat center center fixed;
+    background-size: cover;
+    color: black;
+}
+
+.steak3 {
+    background: url(images/bg/steak3.jpg) no-repeat center center fixed;
+    background-size: cover;
+    color: black;
+}
+
+.templeaz {
+    background: url(images/bg/az-temple.jpg) no-repeat center center fixed;
+    background-size: cover;
+    color: black;
+}
+
+.albertatemple {
+    background: url(images/bg/albertatemple.jpg) no-repeat center center fixed;
+    background-size: cover;
+    color: black;
+}
+
+.scriptures {
+    background: url(images/bg/scripturesbg.jpg) no-repeat center center fixed;
+    background-size: cover;
+    color: black;
+}
+
+
+.goldbg {
+    background: url(images/bg/goldbg.jpg) no-repeat center center fixed;
+    background-size: cover;
+    color: black;
+}
+
+.steel {
+    background: url(images/bg/steel.jpg) no-repeat center center fixed;
+    background-size: cover;
+    color: black;
+}
+
+.jeremiah {
+    background: url(images/bg/jeremiah.jpg) no-repeat center center fixed;
+    color: black;
+    background-size: 100% 100%;
+}
+
+.isaiah {
+    background: url(images/bg/isaiah.jpg) no-repeat center center fixed;
+    color: black;
+    background-size: 100% 100%;
+}
+
+.jerusalem {
+    background: url(images/bg/jerusalem.jpg) no-repeat center center fixed;
+    color: black;
+    background-size: 100% 100%;
+}
+
+.wallbuild {
+    background: url(images/bg/wallbuild.jpg) no-repeat center center fixed;
+    color: black;
+    background-size: 100% 100%;
+}
+
+.jerusalem2 {
+    background: url(images/bg/jerusalem2.jpg) no-repeat center center fixed;
+    color: black;
+    background-size: 100% 100%;
+}
+
+.vintage {
+    background: url(images/bg/vintage.jpg) no-repeat center center fixed;
+    color: black;
+    background-size: 100% 100%;
+}
+
+.wyomingtemple {
+    background: url(images/bg/wyomingtemple.jpg) no-repeat center center fixed;
+    color: black;
+    background-size: 100% 100%;
+}
+
+.rockwall {
+    background: url(images/bg/rockwall.jpg) no-repeat center center fixed;
+    color: black;
+    background-size: 100% 100%;
+}
+
+.lambs {
+    background: url(images/bg/lambs.jpg) no-repeat center center fixed;
+    color: black;
+    background-size: cover;
+}
+
+.city {
+    background: url(images/bg/city.jpg) no-repeat center center fixed;
+    background-size: 100% 100%;
+    color: #373538;
+}
+
+.presnelson {
+    background: url(images/bg/presnelson.jpg) no-repeat center center fixed;
+    background-size: 100% 100%;
+    color: #373538;
+}
+
+.coin {
+    background: url(images/bg/coin.jpg) no-repeat center center fixed;
+    background-size: 100% 100%;
+    color: #373538;
+}
+
+.cloth {
+    background: url(images/bg/cloth.jpg) no-repeat center center fixed;
+    background-size: 100% 100%;
+    color: #373538;
+}
+
+.coco {
+    background: url(images/bg/coco.jpg) no-repeat center center fixed;
+    background-size: 100% 100%;
+    color: #373538;
+}
+
+
+
+
+
+
+
+
+
+
+
+.temple-map {
+    background: url(images/bg/temple-map.png) no-repeat center center fixed;
+    background-size: cover;
+    color: black;
+}
+
+.temple-number {
+    background: url(images/bg/temple-number.png) no-repeat center center fixed;
+    background-size: cover;
+    color: black;
+}
+
+.kirt-temple {
+    background: url(images/bg/kirt-temple.jpg) no-repeat center center fixed;
+    background-size: cover;
+    color: black;
+}
+
+.az-temple {
+    background: url(images/bg/az-temple.jpg) no-repeat center center fixed;
+    background-size: cover;
+    color: black;
+}
+
+.missionaries {
+    background: url(images/bg/missionaries.jpg) no-repeat center center fixed;
+    background-size: cover;
+    color: black;
+}
+
+.wheat {
+    background: url(images/bg/wheat.jpg) no-repeat center center fixed;
+    background-size: cover;
+    color: black;
+}
+
+.dark-clouds {
+    background: url(images/bg/darkclouds.jpg) no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+}
+
+.jesus-storm {
+    background: url(images/bg/jesus-calms-storm.jpg) no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+}
+
+.bethesda {
+    background: url(images/bg/bethesda.jpg) no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+}
+
+.waves {
+    background: url(images/bg/waves.jpg) no-repeat center center fixed;
+    background-size: cover;
+    color: #444444;
+}
+
+.jesus-children {
+    background: url(images/bg/jesus-children.jpg) no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+}
+
+.bread {
+    background: url(images/bg/bread.jpg) no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+}
+
+.milk {
+    background: url(images/bg/milk.jpg) no-repeat center center fixed;
+    background-size: cover;
+    color: #444444;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.door-flowers {
+    background: url(images/bg/door-flowers.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+
+.mountainskybg {
+    background: url(images/bg/mountainskybg.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+
+.christusbg {
+    background: url(images/christusbg.jpg) no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+}
+
+.path-ocean {
+    background: url(images/bg/path-ocean.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+
+.chains-bg {
+    background: url(images/bg/chains.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+
+.castle-bg {
+    background: url(images/bg/castle.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+
+.prison-bg {
+    background: url(images/bg/prisoncell.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+
+.desert-bg {
+    background: url(images/bg/desert.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+
+.hold-hand-bg {
+    background: url(images/bg/jesus-portrait1.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+
+.scriptures-bg {
+    background: url(images/bg/scripturesbg.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+
+.slctemplebg {
+    background: url(images/bg/slctemplebg.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+
+.mountainsky1 {
+    background: url(images/bg/mountainsky1.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+
+.macaronibg {
+    background: url(images/bg/macaronibg.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+
+.templedetroit {
+    background: url(images/bg/templedetroit.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+
+.veilbg {
+    background: url(images/bg/veil.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+
+.dropbg {
+    background: url(images/bg/drop.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+
+.resurrected {
+    background: url(images/bg/resurrected.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+
+.rockbg {
+    background: url(images/bg/rock.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+
+.firstvision {
+    background: url(images/bg/firstvision.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+
+

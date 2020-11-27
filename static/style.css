@@ -39,7 +39,7 @@ blockquote {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    transition: transform 0.5s ease 0s;
+    transition: transform 0.0s ease 0s;
   }
 
   .previous {

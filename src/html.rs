@@ -27,7 +27,8 @@ impl fmt::Display for Output {
         }
 
         writeln!(f, "<script type=\"text/javascript\" src=\"static/script.js\"></script>")?;
-        writeln!(f, "<link rel=\"stylesheet\" href=\"static/style.css\">")?;
+        writeln!(f, "<link rel=\"stylesheet\" href=\"static/default.css\">")?;
+        writeln!(f, "<link rel=\"stylesheet\" href=\"static/styles.css\">")?;
         writeln!(f, "</head>")?;
 
         writeln!(f, "<body>")?;
@@ -91,9 +92,11 @@ impl Renderer {
         let parser = Parser::new_ext(&input, opts);
         let mut in_code_block = false;
         let mut highlighter = None;
+        let mut i = 1;
         let parser = parser.map(|event| match event {
             Event::Rule => {
-                Event::Html("</div>\n</div>\n<div class=\"slide\">\n<div class=\"content\">".into())
+                i += 1;
+                Event::Html(format!("</div>\n</div>\n<div id=\"slide-{}\" class=\"slide hidden\">\n<div class=\"slide-content\">", i).into())
             }
             Event::Start(Tag::CodeBlock(ref kind)) => {
                 in_code_block = true;
@@ -127,7 +130,7 @@ impl Renderer {
 
         let mut html = String::with_capacity(input.len());
         html::push_html(&mut html, parser);
-        html.insert_str(0, "<div class=\"slide\">\n<div class=\"content\">\n");
+        html.insert_str(0, "<div id=\"slide-1\" class=\"slide\">\n<div class=\"slide-content\">\n");
         html.push_str("</div>\n</div>");
 
         Ok(Output {
