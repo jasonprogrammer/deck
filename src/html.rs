@@ -12,8 +12,6 @@ const DEFAULT_THEME: &str = "base16-ocean.dark";
 
 pub struct Output {
     title: Option<String>,
-    style: String,
-    script: String,
     body: String,
 }
 
@@ -28,19 +26,13 @@ impl fmt::Display for Output {
             writeln!(f, "<title>{}</title>", title)?;
         }
 
-        // Style
-        writeln!(f, "<style>")?;
-        writeln!(f, "{}", self.style)?;
-        writeln!(f, "</style>")?;
-        writeln!(f, "<script type=\"text/javascript\">")?;
-        writeln!(f, "{}", self.script)?;
-        writeln!(f, "</script>")?;
+        writeln!(f, "<script type=\"text/javascript\" src=\"static/script.js\"></script>")?;
+        writeln!(f, "<link rel=\"stylesheet\" href=\"static/style.css\">")?;
+        writeln!(f, "</head>")?;
 
         writeln!(f, "<body>")?;
         writeln!(f, "{}", self.body)?;
         writeln!(f, "</body>")?;
-
-        writeln!(f, "</head>")?;
 
         writeln!(f, "</html>")
     }
@@ -92,8 +84,6 @@ impl Renderer {
     pub fn render(
         &self,
         input: String,
-        css: Option<String>,
-        js: Option<String>,
     ) -> Result<Output, Error> {
         // Create parser
         let mut opts = MarkdownOptions::empty();
@@ -140,23 +130,8 @@ impl Renderer {
         html.insert_str(0, "<div class=\"slide\">\n<div class=\"content\">\n");
         html.push_str("</div>\n</div>");
 
-        // Build inline css
-        let mut style = include_str!("style.css").to_owned();
-        if let Some(ref custom_css) = css {
-            style.push_str(custom_css);
-        }
-        let style = minifier::css::minify(&style).map_err(|s| Error::Minification(s))?;
-
-        // Build inline js
-        let mut script = include_str!("script.js").to_owned();
-        if let Some(ref custom_js) = js {
-            script.push_str(custom_js);
-        }
-        let script = minifier::js::minify(&script);
         Ok(Output {
             title: self.title.clone(),
-            style,
-            script,
             body: html,
         })
     }
@@ -180,7 +155,7 @@ This is a **test**
 And it should work"#;
         let renderer = Renderer::try_new(Options::default()).expect("Failed to create renderer");
         let output = renderer
-            .render(input.into(), None, None)
+            .render(input.into(), None)
             .expect("Failed to render");
         assert_eq!(
             r#"<div class="slide">

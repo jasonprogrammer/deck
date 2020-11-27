@@ -4,7 +4,6 @@ use warp::reject;
 #[derive(Debug)]
 pub enum Error {
     Io(io::Error),
-    Minification(&'static str),
     Syntect(syntect::LoadingError),
     JsonSerialization(serde_json::error::Error),
     ThemeNotFound,
@@ -19,7 +18,6 @@ impl fmt::Display for Error {
         use Error::*;
         match self {
             Io(err) => err.fmt(f),
-            Minification(err) => write!(f, "{}", err),
             Syntect(err) => err.fmt(f),
             JsonSerialization(err) => err.fmt(f),
             ThemeNotFound => write!(f, "Theme not found"),

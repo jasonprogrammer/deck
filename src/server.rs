@@ -68,8 +68,6 @@ pub struct Config {
 
 struct Paths {
     input: PathBuf,
-    css: Option<PathBuf>,
-    js: Option<PathBuf>,
 }
 
 fn convert_error<E: Into<Error>>(err: E) -> warp::Rejection {
@@ -80,22 +78,10 @@ async fn get_slides(
     paths: Arc<Paths>,
     renderer: Arc<html::Renderer>,
 ) -> Result<impl warp::Reply, warp::Rejection> {
-    let css = if let Some(ref path) = paths.css {
-        let s = fs::read_to_string(path).await.map_err(convert_error)?;
-        Some(s)
-    } else {
-        None
-    };
-    let js = if let Some(ref path) = paths.js {
-        let s = fs::read_to_string(path).await.map_err(convert_error)?;
-        Some(s)
-    } else {
-        None
-    };
     let markdown = fs::read_to_string(&paths.input)
         .await
         .map_err(convert_error)?;
-    let html = renderer.render(markdown, css, js).map_err(convert_error)?;
+    let html = renderer.render(markdown).map_err(convert_error)?;
     Ok(warp::reply::html(format!("{}", html)))
 }
 
@@ -176,8 +162,6 @@ pub async fn start(config: Config) -> Result<(), Error> {
         let paths = {
             let p = Paths {
                 input: config.input.clone(),
-                js: config.js.clone(),
-                css: config.css.clone(),
             };
             Arc::new(p)
         };
@@ -205,6 +189,7 @@ pub async fn start(config: Config) -> Result<(), Error> {
             })
     };
     let routes = slides
+        .or(warp::path("static").and(warp::fs::dir("static")))
         .or(ws)
         .with(warp::log("deck"))
         .recover(customize_error);

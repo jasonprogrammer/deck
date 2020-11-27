@@ -1,4 +1,3 @@
-use std::fs;
 use std::io::{self, Read};
 use std::path::PathBuf;
 
@@ -33,12 +32,6 @@ enum Command {
         /// Add a directory to the paths searched for syntect themes (.tmTheme files)
         #[structopt(long = "theme-dir")]
         theme_dirs: Vec<PathBuf>,
-        /// Add custom css from the given file
-        #[structopt(long = "css")]
-        css: Option<PathBuf>,
-        /// Add custom javascript from the given file
-        #[structopt(long = "js")]
-        js: Option<PathBuf>,
     },
     /// Serve a local markdown files containing the slides markup
     #[structopt(name = "serve")]
@@ -87,27 +80,11 @@ async fn main() -> Result<(), Error> {
         Command::Build {
             theme,
             title,
-            css,
-            js,
             theme_dirs,
         } => {
             // Read input from stdin
             let mut input = String::new();
             io::stdin().read_to_string(&mut input)?;
-
-            let css = if let Some(path) = css {
-                let s = fs::read_to_string(path)?;
-                Some(s)
-            } else {
-                None
-            };
-
-            let js = if let Some(path) = js {
-                let s = fs::read_to_string(path)?;
-                Some(s)
-            } else {
-                None
-            };
 
             // Render html to stdout
             let options = html::Options {
@@ -117,7 +94,7 @@ async fn main() -> Result<(), Error> {
             };
 
             let renderer = html::Renderer::try_new(options)?;
-            let html = renderer.render(input, css, js)?;
+            let html = renderer.render(input)?;
             print!("{}", html);
         }
         Command::Serve {
